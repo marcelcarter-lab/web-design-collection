@@ -1,0 +1,255 @@
+/* start global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.parent {
+  background-color: #eee;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium devices (desktops, 992px and up)  */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large devices (large desktops, 1200px and up)   */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* end global rules */
+/* start splash screen  */
+.screen {
+  position: absolute;
+  background-color: #03a9f4bd;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+}
+.screen .con {
+  position: relative;
+  width: fit-content;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+.screen .con button {
+  padding: 15px 35px;
+  background-color: #ff3f02;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  border: 2px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.screen .con button:hover {
+  background-color: rgb(110, 29, 0);
+}
+/* end splash screen  */
+/* start header */
+.header {
+  position: relative;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .container {
+  max-width: 775px;
+}
+.header .container .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  left: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+  background-color: #2195f366;
+  margin-top: 20px;
+  border: 3px solid #0000ffa8;
+}
+.header .container .title .tries {
+  display: flex;
+}
+/* end header */
+/* start carts */
+.carts .container {
+  width: 890px;
+}
+.carts .block-game {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 890px;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.block-game.no-clicking,
+.content.no-clicking {
+  pointer-events: none;
+}
+.carts .container .content {
+  height: 140px;
+  width: 140px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  transform-style: preserve-3d;
+}
+.transform,
+.match {
+  transform: rotateY(180deg);
+}
+.carts .content .front {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 100px;
+  font-weight: bold;
+  background-color: #1e1e1e;
+  border: 4px solid #03a9f4;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  transition: transform 1s;
+}
+.carts .container .content .back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  background-color: #1e1e1e;
+  border: 4px solid #03a9f4;
+  transition: transform 1s;
+  transform: rotateY(180deg);
+}
+.carts .container .content .back i {
+  font-size: 80px;
+}
+
+/* end carts */
+/* start alert */
+.alert,
+.canceling {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: fit-content;
+  background-color: #03a9f4bd;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  transform: translate(-50%, -50%);
+}
+.alert.none,
+.canceling.none {
+  display: none;
+}
+.alert .pop,
+.canceling .pop {
+  background-color: white;
+  width: 50%;
+  height: 30%;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+}
+.alert h2 {
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: #ff3400;
+}
+.alert h3 {
+  font-size: 25px;
+}
+.alert p {
+  margin-top: 20px;
+  font-weight: bold;
+}
+.alert button {
+  position: absolute;
+  padding: 7px 24px;
+  bottom: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  border: 2px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.alert .replay {
+  background-color: #ff3f02;
+  color: white;
+  left: 25%;
+}
+.alert .cancel {
+  background-color: white;
+  color: black;
+  right: 25%;
+  border: 2px solid black;
+}
+.alert .cancel:hover {
+  background-color: rgb(206, 206, 206);
+}
+.alert .replay:hover {
+  background-color: rgb(110, 29, 0);
+}
+/* end alert */
+/* start cancel */
+.canceling h1 {
+  font-size: 50px;
+  transform: translateY(-31px);
+  margin-bottom: 0px;
+  color: #ff3f02;
+}
+.canceling p {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* ebd cancel */

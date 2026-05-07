@@ -1,0 +1,77 @@
+.container{
+    text-align: center;
+}
+.container .form,
+.container .tasks{
+    background-color: #eee;
+    width: 400px;
+    left: 50%;
+    position: relative;
+    padding: 20px;
+    border-radius: 5px;
+    transform: translateX(-50%);
+}
+.container .form{
+    height: 33px;
+}
+.container .tasks{
+    margin-top: 20px;
+    padding-bottom: 1px;
+}
+.form .input,
+.form .add{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.form .input{
+    left: 20px;
+    width: 305px;
+    height: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 9px;
+    top: 50%;
+    caret-color: #8f8c8c;
+    transform: translateY(-50%);
+}
+.form .add,
+.tasks .skill .delete{
+    right: 20px;
+    width: fit-content;
+    border-radius: 5px;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    background-color: #ff5722;
+}
+.form .add{
+    height: 33px;
+}
+.form .add:hover,
+.tasks .skill .delete:hover{
+    background-color: #dd3500;
+}
+
+.tasks .skill{
+    height: 33px;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.tasks .skill .delete{
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    transform: translate(15px,-50%);
+}
+.skill .content{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
