@@ -14,7 +14,7 @@ These projects represent simple concepts and experiments in web design, includin
 
 The goal of this repository is to:
 
-- Practice front-end development skills
+- Practice front end development skills
 - Improve website design techniques
 - Store past projects and experiments
 - Showcase learning progress over time
